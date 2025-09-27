@@ -36,7 +36,7 @@ namespace MegaHOP
         {
             if (__instance.playerMovement)
             {
-                if (StupidJumpDetectionPatch.IsHoldingJump && __instance.playerMovement.CanJump())
+                if (StupidJumpDetectionPatch.IsHoldingJump && __instance.playerMovement.grounded)
                 {
                     __instance.playerMovement.Jump();
                 }
