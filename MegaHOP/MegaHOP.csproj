@@ -13,14 +13,12 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 
-		<!-- CHANGE THIS to your install path -->
 		<GameDir>D:\SteamLibrary\steamapps\common\Megabonk</GameDir>
 		<BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
 		<InteropDir>$(GameDir)\BepInEx\interop</InteropDir>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<!-- BepInEx v6 core + IL2CPP + Il2CppInterop -->
 		<Reference Include="BepInEx.Core">
 			<HintPath>$(BepInExCore)\BepInEx.Core.dll</HintPath>
 		</Reference>
@@ -34,7 +32,6 @@
 			<HintPath>$(BepInExCore)\Il2CppInterop.Runtime.dll</HintPath>
 		</Reference>
 
-		<!-- Harmony: prefer HarmonyX.dll if present, else 0Harmony.dll -->
 		<Reference Include="HarmonyLib" Condition="Exists('$(BepInExCore)\HarmonyX.dll')">
 			<HintPath>$(BepInExCore)\HarmonyX.dll</HintPath>
 		</Reference>
@@ -42,7 +39,6 @@
 			<HintPath>$(BepInExCore)\0Harmony.dll</HintPath>
 		</Reference>
 
-		<!-- Minimal IL2CPP interop set (generated after first run) -->
 		<Reference Include="Assembly-CSharp">
 			<HintPath>$(InteropDir)\Assembly-CSharp.dll</HintPath>
 		</Reference>
