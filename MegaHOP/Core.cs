@@ -3,7 +3,6 @@ using BepInEx;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 
-
 namespace MegaHOP
 {
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
